@@ -4,7 +4,7 @@
       "image": "/images/art-1.jpg",
       "title": "Painting 1",
       "description": "",
-      "available": true,
+      "available": false,
       "status": "available",
       "price": "PKR 40,000",
       "year": "2025",
