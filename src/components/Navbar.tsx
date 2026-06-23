@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
-import site from "../content/site.json";
+
+const links = [
+  { href: "#gallery", label: "Gallery" },
+  { href: "#about", label: "About" },
+  { href: "#commissions", label: "Commissions" },
+  { href: "#contact", label: "Contact" },
+];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-
-  const links = site.nav.filter((l) => l.visible !== false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -24,10 +28,10 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
         <a href="#top" className="flex flex-col leading-none">
           <span className="font-display text-2xl md:text-3xl tracking-wider text-ink">
-            {site.logoText}
+            Layba Amjad
           </span>
           <span className="text-[10px] uppercase tracking-[0.35em] text-taupe mt-1">
-            {site.logoSubtext}
+            Fine Artist · Lahore
           </span>
         </a>
 
@@ -46,10 +50,10 @@ export default function Navbar() {
         </ul>
 
         <a
-          href={site.navCtaHref}
+          href="#commissions"
           className="hidden md:inline-flex items-center gap-2 bg-wine hover:bg-wine-dark text-ivory text-sm px-5 py-2.5 rounded-full transition-colors"
         >
-          {site.navCtaLabel}
+          Commission a Piece
           <span aria-hidden>→</span>
         </a>
 
@@ -79,11 +83,11 @@ export default function Navbar() {
               </li>
             ))}
             <a
-              href={site.navCtaHref}
+              href="#commissions"
               onClick={() => setOpen(false)}
               className="inline-block text-center mt-2 bg-wine text-ivory py-3 rounded-full"
             >
-              {site.navCtaLabel}
+              Commission a Piece
             </a>
           </ul>
         </div>

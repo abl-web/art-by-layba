@@ -6,8 +6,6 @@
   NODE_VERSION = "20"
   NETLIFY = "true"
 
-# Copy admin panel into dist (CMS files are in public/, Vite copies them automatically)
-
 [[redirects]]
   from = "/*"
   to = "/index.html"
@@ -34,10 +32,3 @@
   for = "/*.png"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-
-# Allow admin panel to be embedded in iframe (needed by Sveltia CMS)
-[[headers]]
-  for = "/admin/*"
-  [headers.values]
-    X-Frame-Options = "SAMEORIGIN"
-    Content-Security-Policy = "frame-ancestors 'self'"
