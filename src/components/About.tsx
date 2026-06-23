@@ -1,6 +1,6 @@
 import site from "../content/site.json";
-const artistPortrait = "/images/artist-portrait.jpg";
-const artistStudio = "/images/artist-studio.jpg";
+const artistPortrait = "/images/artist-portrait.jpeg";
+const artistStudio = "/images/artist-studio.jpeg";
 
 export default function About() {
   return (
