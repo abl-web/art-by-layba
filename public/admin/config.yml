@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: abl-web/REPLACE-WITH-REPO-NAME
+  repo: abl-web/art-by-layba
   branch: main
 
 media_folder: "public/uploads"
