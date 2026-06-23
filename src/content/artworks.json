@@ -1,166 +1,169 @@
 {
   "items": [
     {
-      "title": "Painting 1",
       "image": "/images/art-1.jpg",
-      "medium": "Oil on canvas",
-      "dimensions": "20 \u00d7 20 in",
-      "year": "2025",
+      "title": "Painting 1",
+      "description": "",
+      "available": true,
+      "status": "available",
       "price": "PKR 40,000",
-      "status": "available"
+      "year": "2025",
+      "dimensions": "20 × 20 in",
+      "medium": "Oil on canvas"
     },
     {
-      "title": "Painting 2",
       "image": "/images/art-2.jpg",
-      "medium": "Oil on canvas",
-      "dimensions": "20 \u00d7 20 in",
-      "year": "2025",
+      "title": "Painting 2",
+      "description": "",
+      "status": "available",
       "price": "PKR 40,000",
-      "status": "available"
+      "year": "2025",
+      "dimensions": "20 × 20 in",
+      "medium": "Oil on canvas"
     },
     {
-      "title": "Painting 3",
       "image": "/images/art-3.jpg",
-      "medium": "Oil on canvas",
-      "dimensions": "20 \u00d7 20 in",
-      "year": "2025",
+      "title": "Painting 3",
+      "status": "available",
       "price": "PKR 40,000",
-      "status": "available"
+      "year": "2025",
+      "dimensions": "20 × 20 in",
+      "medium": "Oil on canvas"
     },
     {
-      "title": "Painting 4",
       "image": "/images/art-4.jpg",
-      "medium": "Oil on canvas",
-      "dimensions": "20 \u00d7 20 in",
-      "year": "2025",
+      "title": "Painting 4",
+      "status": "available",
       "price": "PKR 40,000",
-      "status": "available"
+      "year": "2025",
+      "dimensions": "20 × 20 in",
+      "medium": "Oil on canvas"
     },
     {
-      "title": "Painting 5",
       "image": "/images/art-5.jpg",
-      "medium": "Oil on canvas",
-      "dimensions": "20 \u00d7 20 in",
-      "year": "2025",
+      "title": "Painting 5",
+      "status": "available",
       "price": "PKR 40,000",
-      "status": "available"
+      "year": "2025",
+      "dimensions": "20 × 20 in",
+      "medium": "Oil on canvas"
     },
     {
-      "title": "Painting 6",
       "image": "/images/art-6.jpg",
-      "medium": "Oil on canvas",
-      "dimensions": "20 \u00d7 20 in",
-      "year": "2025",
+      "title": "Painting 6",
+      "status": "available",
       "price": "PKR 40,000",
-      "status": "available"
+      "year": "2025",
+      "dimensions": "20 × 20 in",
+      "medium": "Oil on canvas"
     },
     {
-      "title": "Painting 7",
       "image": "/images/art-7.jpg",
-      "medium": "Oil on canvas",
-      "dimensions": "20 \u00d7 20 in",
-      "year": "2025",
+      "title": "Painting 7",
+      "status": "available",
       "price": "PKR 40,000",
-      "status": "available"
+      "year": "2025",
+      "dimensions": "20 × 20 in",
+      "medium": "Oil on canvas"
     },
     {
-      "title": "Painting 8",
       "image": "/images/art-8.jpg",
-      "medium": "Oil on canvas",
-      "dimensions": "20 \u00d7 20 in",
-      "year": "2025",
+      "title": "Painting 8",
+      "status": "available",
       "price": "PKR 40,000",
-      "status": "available"
+      "year": "2025",
+      "dimensions": "20 × 20 in",
+      "medium": "Oil on canvas"
     },
     {
-      "title": "Painting 9",
       "image": "/images/art-9.jpg",
-      "medium": "Oil on canvas",
-      "dimensions": "20 \u00d7 20 in",
-      "year": "2025",
+      "title": "Painting 9",
+      "status": "available",
       "price": "PKR 40,000",
-      "status": "available"
+      "year": "2025",
+      "dimensions": "20 × 20 in",
+      "medium": "Oil on canvas"
     },
     {
-      "title": "Painting 10",
       "image": "/images/art-10.jpg",
-      "medium": "Oil on canvas",
-      "dimensions": "20 \u00d7 20 in",
-      "year": "2025",
+      "title": "Painting 10",
+      "status": "available",
       "price": "PKR 40,000",
-      "status": "available"
+      "year": "2025",
+      "dimensions": "20 × 20 in",
+      "medium": "Oil on canvas"
     },
     {
-      "title": "Painting 11",
       "image": "/images/art-11.jpg",
-      "medium": "Oil on canvas",
-      "dimensions": "20 \u00d7 20 in",
-      "year": "2025",
+      "title": "Painting 11",
+      "status": "available",
       "price": "PKR 40,000",
-      "status": "available"
+      "year": "2025",
+      "dimensions": "20 × 20 in",
+      "medium": "Oil on canvas"
     },
     {
-      "title": "Painting 12",
       "image": "/images/art-12.jpg",
-      "medium": "Oil on canvas",
-      "dimensions": "20 \u00d7 20 in",
-      "year": "2025",
+      "title": "Painting 12",
+      "status": "available",
       "price": "PKR 40,000",
-      "status": "available"
+      "year": "2025",
+      "dimensions": "20 × 20 in",
+      "medium": "Oil on canvas"
     },
     {
-      "title": "Painting 13",
       "image": "/images/art-13.jpg",
-      "medium": "Oil on canvas",
-      "dimensions": "20 \u00d7 20 in",
-      "year": "2025",
+      "title": "Painting 13",
+      "status": "available",
       "price": "PKR 40,000",
-      "status": "available"
+      "year": "2025",
+      "dimensions": "20 × 20 in",
+      "medium": "Oil on canvas"
     },
     {
-      "title": "Painting 14",
       "image": "/images/art-14.jpg",
-      "medium": "Oil on canvas",
-      "dimensions": "20 \u00d7 20 in",
-      "year": "2025",
+      "title": "Painting 14",
+      "status": "available",
       "price": "PKR 40,000",
-      "status": "available"
+      "year": "2025",
+      "dimensions": "20 × 20 in",
+      "medium": "Oil on canvas"
     },
     {
-      "title": "Painting 15",
       "image": "/images/art-15.jpg",
-      "medium": "Oil on canvas",
-      "dimensions": "20 \u00d7 20 in",
-      "year": "2025",
+      "title": "Painting 15",
+      "status": "available",
       "price": "PKR 40,000",
-      "status": "available"
+      "year": "2025",
+      "dimensions": "20 × 20 in",
+      "medium": "Oil on canvas"
     },
     {
-      "title": "Painting 16",
       "image": "/images/art-16.jpg",
-      "medium": "Oil on canvas",
-      "dimensions": "20 \u00d7 20 in",
-      "year": "2025",
+      "title": "Painting 16",
+      "status": "available",
       "price": "PKR 40,000",
-      "status": "available"
+      "year": "2025",
+      "dimensions": "20 × 20 in",
+      "medium": "Oil on canvas"
     },
     {
-      "title": "Painting 17",
       "image": "/images/art-17.jpg",
-      "medium": "Oil on canvas",
-      "dimensions": "20 \u00d7 20 in",
-      "year": "2025",
+      "title": "Painting 17",
+      "status": "available",
       "price": "PKR 40,000",
-      "status": "available"
+      "year": "2025",
+      "dimensions": "20 × 20 in",
+      "medium": "Oil on canvas"
     },
     {
-      "title": "Painting 18",
       "image": "/images/art-18.jpg",
-      "medium": "Oil on canvas",
-      "dimensions": "20 \u00d7 20 in",
-      "year": "2025",
+      "title": "Painting 18",
+      "status": "available",
       "price": "PKR 40,000",
-      "status": "available"
+      "year": "2025",
+      "dimensions": "20 × 20 in",
+      "medium": "Oil on canvas"
     }
   ]
 }
