@@ -1,0 +1,32 @@
+backend:
+  name: github
+  repo: abl-web/REPLACE-WITH-REPO-NAME
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "content"
+    label: "Website content"
+    files:
+      - name: "hero"
+        label: "Homepage text"
+        file: "src/content/site.json"
+        fields:
+          - {label: "Artist name", name: "artistName", widget: "string"}
+          - {label: "Homepage heading", name: "heroText", widget: "text"}
+          - {label: "About", name: "about", widget: "text"}
+          - {label: "Email", name: "email", widget: "string"}
+      - name: "gallery"
+        label: "Artwork gallery"
+        file: "src/content/artworks.json"
+        fields:
+          - label: "Artworks"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text", required: false}
+              - {label: "Available", name: "available", widget: "boolean", default: true}
