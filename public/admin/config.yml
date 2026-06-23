@@ -3,30 +3,260 @@ backend:
   repo: abl-web/art-by-layba
   branch: main
 
-media_folder: "public/uploads"
-public_folder: "/uploads"
+media_folder: "public/images"
+public_folder: "/images"
 
 collections:
-  - name: "content"
-    label: "Website content"
+
+  # ─── SITE SETTINGS ───────────────────────────────────────────────
+  - name: "settings"
+    label: "⚙️ Site Settings"
     files:
-      - name: "hero"
-        label: "Homepage text"
+
+      - name: "global"
+        label: "Global Settings"
         file: "src/content/site.json"
         fields:
-          - {label: "Artist name", name: "artistName", widget: "string"}
-          - {label: "Homepage heading", name: "heroText", widget: "text"}
-          - {label: "About", name: "about", widget: "text"}
-          - {label: "Email", name: "email", widget: "string"}
+
+          # Brand
+          - label: "Artist / Brand Name"
+            name: "artistName"
+            widget: "string"
+            hint: "Used throughout the site as the artist's name."
+
+          - label: "Site Title (browser tab)"
+            name: "siteTitle"
+            widget: "string"
+            hint: "Appears in the browser tab and search results."
+
+          - label: "Logo Text (top left)"
+            name: "logoText"
+            widget: "string"
+
+          - label: "Logo Subtext"
+            name: "logoSubtext"
+            widget: "string"
+            hint: "Small text below the logo, e.g. Fine Artist · Lahore"
+
+          - label: "Site Tagline"
+            name: "tagline"
+            widget: "string"
+
+          - label: "Default SEO Title"
+            name: "seoTitle"
+            widget: "string"
+
+          - label: "Default SEO Description"
+            name: "seoDescription"
+            widget: "text"
+
+          # Contact
+          - label: "Primary Contact Email"
+            name: "contactEmail"
+            widget: "string"
+
+          - label: "Instagram URL"
+            name: "instagramUrl"
+            widget: "string"
+
+          - label: "Instagram Handle"
+            name: "instagramHandle"
+            widget: "string"
+            hint: "e.g. @art_by_layba"
+
+          - label: "Artist Location"
+            name: "location"
+            widget: "string"
+
+          # Navigation
+          - label: "Navigation CTA Button Label"
+            name: "navCtaLabel"
+            widget: "string"
+
+          - label: "Navigation CTA Button Destination"
+            name: "navCtaHref"
+            widget: "string"
+
+          - label: "Navigation Links"
+            name: "nav"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Link (href)", name: "href", widget: "string" }
+              - { label: "Visible", name: "visible", widget: "boolean", default: true }
+
+          # ── HERO ──────────────────────────────────────────────────
+          - label: "🏠 Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Show Hero Section", name: "visible", widget: "boolean", default: true }
+              - { label: "Eyebrow / Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Heading (main line)", name: "heading", widget: "string" }
+              - { label: "Heading Italic Word", name: "headingItalic", widget: "string" }
+              - { label: "Subheading / Introduction", name: "subheading", widget: "text" }
+              - { label: "Hero Background Image", name: "image", widget: "image" }
+              - { label: "Hero Image Alt Text", name: "imageAlt", widget: "string" }
+              - { label: "Primary Button Label", name: "primaryButtonLabel", widget: "string" }
+              - { label: "Primary Button Destination", name: "primaryButtonHref", widget: "string" }
+              - { label: "Secondary Button Label", name: "secondaryButtonLabel", widget: "string" }
+              - { label: "Secondary Button Destination", name: "secondaryButtonHref", widget: "string" }
+
+          # ── ABOUT ─────────────────────────────────────────────────
+          - label: "🎨 About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Show About Section", name: "visible", widget: "boolean", default: true }
+              - { label: "Section Title", name: "sectionTitle", widget: "string" }
+              - { label: "Section Subtitle / Intro Line", name: "sectionSubtitle", widget: "string" }
+              - { label: "Artist Name", name: "artistName", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+              - label: "Full Artist Biography"
+                name: "biography"
+                widget: "text"
+                hint: "Separate paragraphs with a blank line."
+              - { label: "Education / Qualification", name: "education", widget: "string" }
+              - { label: "Education Institution", name: "educationInstitution", widget: "string" }
+              - { label: "Medium", name: "medium", widget: "string" }
+              - { label: "Medium Note", name: "mediumNote", widget: "string" }
+              - { label: "About Image 1 (portrait)", name: "image1", widget: "image" }
+              - { label: "About Image 1 Alt Text", name: "image1Alt", widget: "string" }
+              - { label: "About Image 2 (studio)", name: "image2", widget: "image" }
+              - { label: "About Image 2 Alt Text", name: "image2Alt", widget: "string" }
+
+          # ── GALLERY SETTINGS ──────────────────────────────────────
+          - label: "🖼 Gallery Settings"
+            name: "gallery"
+            widget: "object"
+            fields:
+              - { label: "Show Gallery Section", name: "visible", widget: "boolean", default: true }
+              - { label: "Gallery Heading", name: "heading", widget: "string" }
+              - { label: "Gallery Intro Text", name: "introText", widget: "text" }
+              - { label: "Show Filter Buttons", name: "filtersVisible", widget: "boolean", default: true }
+
+          # ── COMMISSIONS SECTION ───────────────────────────────────
+          - label: "✏️ Commissions Section"
+            name: "commissions"
+            widget: "object"
+            fields:
+              - { label: "Show Commissions Section", name: "visible", widget: "boolean", default: true }
+              - { label: "Section Heading", name: "heading", widget: "string" }
+              - { label: "Section Introduction", name: "introduction", widget: "text" }
+              - { label: "Currently Accepting Commissions", name: "available", widget: "boolean", default: true }
+              - { label: "Availability Note", name: "availabilityNote", widget: "string" }
+              - { label: "Turnaround Note", name: "turnaroundNote", widget: "string" }
+              - { label: "Enquiry Button Label", name: "enquiryButtonLabel", widget: "string" }
+              - { label: "Enquiry Button Destination", name: "enquiryButtonHref", widget: "string" }
+
+          # ── CONTACT ───────────────────────────────────────────────
+          - label: "📬 Contact Section"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Show Contact Section", name: "visible", widget: "boolean", default: true }
+              - { label: "Contact Heading", name: "heading", widget: "string" }
+              - { label: "Contact Intro Text", name: "introText", widget: "text" }
+              - { label: "Contact Email", name: "email", widget: "string" }
+              - { label: "Email Button Label", name: "emailButtonLabel", widget: "string" }
+              - { label: "Email Subject Line (prefilled)", name: "emailSubject", widget: "string" }
+              - { label: "Instagram URL", name: "instagramUrl", widget: "string" }
+              - { label: "Instagram Label", name: "instagramLabel", widget: "string" }
+
+          # ── FOOTER ────────────────────────────────────────────────
+          - label: "🔻 Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Footer Artist / Brand Name", name: "artistName", widget: "string" }
+              - { label: "Footer Tagline", name: "tagline", widget: "string" }
+              - { label: "Footer Location", name: "location", widget: "string" }
+              - { label: "Footer Email", name: "email", widget: "string" }
+              - { label: "Footer Instagram URL", name: "instagramUrl", widget: "string" }
+              - { label: "Footer Instagram Handle", name: "instagramHandle", widget: "string" }
+              - { label: "Footer Description", name: "description", widget: "text" }
+              - { label: "Copyright Text  (use {year} for current year)", name: "copyrightText", widget: "string" }
+              - { label: "Footer Quote", name: "quote", widget: "string" }
+              - label: "Footer Navigation Links"
+                name: "links"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Link (href)", name: "href", widget: "string" }
+                  - { label: "Visible", name: "visible", widget: "boolean", default: true }
+
+  # ─── ARTWORK COLLECTION ──────────────────────────────────────────
+  - name: "artworks"
+    label: "🖼 Artworks"
+    files:
       - name: "gallery"
-        label: "Artwork gallery"
+        label: "Artwork Collection"
         file: "src/content/artworks.json"
         fields:
           - label: "Artworks"
             name: "items"
             widget: "list"
+            summary: "{{fields.title}} — {{fields.status}}"
             fields:
-              - {label: "Image", name: "image", widget: "image"}
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Description", name: "description", widget: "text", required: false}
-              - {label: "Available", name: "available", widget: "boolean", default: true}
+              - { label: "Internal ID / Slug", name: "id", widget: "string", hint: "Unique identifier, no spaces, e.g. painting-01" }
+              - { label: "Sort Order", name: "sortOrder", widget: "number", value_type: "int" }
+              - { label: "Artwork Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Medium", name: "medium", widget: "string", hint: "e.g. Oil on canvas" }
+              - { label: "Dimensions / Size", name: "dimensions", widget: "string", hint: "e.g. 20 × 20 in" }
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Price", name: "price", widget: "string", hint: "e.g. PKR 40,000 or POA" }
+              - label: "Status"
+                name: "status"
+                widget: "select"
+                options:
+                  - { label: "Available", value: "available" }
+                  - { label: "Sold", value: "sold" }
+                  - { label: "Private / Not for sale", value: "private" }
+                default: "available"
+              - { label: "Featured", name: "featured", widget: "boolean", default: false }
+              - { label: "Visible on website", name: "visible", widget: "boolean", default: true }
+              - { label: "Short Description", name: "shortDescription", widget: "text", required: false }
+              - { label: "Full Description (shown in lightbox)", name: "fullDescription", widget: "text", required: false }
+              - { label: "Category / Collection", name: "category", widget: "string", required: false }
+              - { label: "Enquiry Button Text", name: "enquiryButtonText", widget: "string", default: "Enquire about this piece" }
+
+  # ─── COMMISSION PACKAGES ─────────────────────────────────────────
+  - name: "commissions_packages"
+    label: "✏️ Commission Packages"
+    files:
+      - name: "packages"
+        label: "Commission Packages"
+        file: "src/content/commissions.json"
+        fields:
+          - label: "Packages"
+            name: "packages"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.price}}"
+            fields:
+              - { label: "Internal ID / Slug", name: "id", widget: "string" }
+              - { label: "Display Order", name: "sortOrder", widget: "number", value_type: "int" }
+              - { label: "Visible", name: "visible", widget: "boolean", default: true }
+              - { label: "Package Name", name: "name", widget: "string" }
+              - { label: "Package Image", name: "image", widget: "image", required: false }
+              - { label: "Package Image Alt Text", name: "imageAlt", widget: "string", required: false }
+              - { label: "Price", name: "price", widget: "string", hint: "e.g. PKR 25,000 or From £100" }
+              - { label: "Price Label", name: "priceLabel", widget: "string", hint: "e.g. Starting at" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "What is Included", name: "includes", widget: "text" }
+              - { label: "Size / Format", name: "size", widget: "string" }
+              - { label: "Medium", name: "medium", widget: "string" }
+              - { label: "Number of Revisions", name: "revisions", widget: "string", required: false }
+              - { label: "Estimated Turnaround Time", name: "turnaround", widget: "string" }
+              - label: "Availability Status"
+                name: "availabilityStatus"
+                widget: "select"
+                options:
+                  - { label: "Available", value: "available" }
+                  - { label: "Paused", value: "paused" }
+                  - { label: "Sold Out", value: "sold_out" }
+                default: "available"
+              - { label: "Button Label", name: "buttonLabel", widget: "string" }
+              - { label: "Button Destination", name: "buttonHref", widget: "string" }
+              - { label: "Optional Notes / Restrictions", name: "notes", widget: "text", required: false }

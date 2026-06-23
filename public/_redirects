@@ -1,2 +1,5 @@
-# Netlify redirects for SPA support
+# Serve the CMS admin panel from /admin
+/admin/index.html   /admin/index.html  200
+
+# SPA fallback — must come after /admin rule
 /*    /index.html   200

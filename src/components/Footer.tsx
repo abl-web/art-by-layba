@@ -1,46 +1,38 @@
+import site from "../content/site.json";
+
 export default function Footer() {
+  const f = site.footer;
+  const year = new Date().getFullYear();
+  const copyright = f.copyrightText.replace("{year}", String(year));
+
   return (
     <footer id="contact" className="bg-ink text-ivory relative overflow-hidden grain">
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28">
         <div className="grid md:grid-cols-3 gap-14">
           {/* Brand */}
           <div>
-            <h3 className="font-display text-4xl leading-none">Layba Amjad</h3>
+            <h3 className="font-display text-4xl leading-none">{f.artistName}</h3>
             <p className="mt-2 text-xs uppercase tracking-[0.4em] text-gold-light">
-              Fine Artist · Lahore
+              {f.tagline}
             </p>
             <p className="mt-6 text-ivory/60 text-sm leading-relaxed max-w-xs">
-              Original paintings and bespoke commissions. Each piece created by hand in
-              a small studio in Lahore, shipped worldwide.
+              {f.description}
             </p>
           </div>
 
           {/* Links */}
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-gold-light mb-4">
-              Explore
-            </p>
+            <p className="text-xs uppercase tracking-[0.3em] text-gold-light mb-4">Explore</p>
             <ul className="space-y-3 text-ivory/80 text-sm">
-              <li>
-                <a href="#gallery" className="hover:text-gold-light transition-colors">
-                  Gallery
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="hover:text-gold-light transition-colors">
-                  About Layba
-                </a>
-              </li>
-              <li>
-                <a href="#commissions" className="hover:text-gold-light transition-colors">
-                  Commissions
-                </a>
-              </li>
-              <li>
-                <a href="#commissions" className="hover:text-gold-light transition-colors">
-                  Purchase a piece
-                </a>
-              </li>
+              {f.links
+                .filter((l) => l.visible !== false)
+                .map((l) => (
+                  <li key={l.label}>
+                    <a href={l.href} className="hover:text-gold-light transition-colors">
+                      {l.label}
+                    </a>
+                  </li>
+                ))}
             </ul>
           </div>
 
@@ -52,27 +44,27 @@ export default function Footer() {
             <ul className="space-y-3 text-ivory/80 text-sm">
               <li>
                 <a
-                  href="https://www.instagram.com/art_by_layba/"
+                  href={f.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-gold-light transition-colors flex items-center gap-2"
                 >
                   <InstagramIcon />
-                  @art_by_layba
+                  {f.instagramHandle}
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:hello@laybaamjad.art"
+                  href={`mailto:${f.email}`}
                   className="hover:text-gold-light transition-colors flex items-center gap-2"
                 >
                   <MailIcon />
-                  hello@laybaamjad.art
+                  {f.email}
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <PinIcon />
-                Lahore, Pakistan
+                {f.location}
               </li>
             </ul>
 
@@ -80,16 +72,14 @@ export default function Footer() {
               href="#commissions"
               className="mt-8 inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-ink text-sm px-6 py-3 rounded-full transition-colors"
             >
-              Start a Commission →
+              {site.commissions.enquiryButtonLabel} →
             </a>
           </div>
         </div>
 
         <div className="mt-16 pt-8 border-t border-ivory/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-ivory/50">
-          <p>© {new Date().getFullYear()} Layba Amjad. All artworks & content reserved.</p>
-          <p className="font-serif italic">
-            "Every canvas is a conversation." — L.A.
-          </p>
+          <p>{copyright}</p>
+          <p className="font-serif italic">{f.quote}</p>
         </div>
       </div>
     </footer>
