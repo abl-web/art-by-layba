@@ -11,13 +11,26 @@ type Artwork = {
   status: "available" | "sold" | "private";
 };
 
-import artworkData from "../content/artworks.json";
-
-const artworks: Artwork[] = artworkData.items.map((item, index) => ({
-  id: index + 1, src: item.image, title: item.title, medium: item.medium || "",
-  size: item.dimensions || "", year: item.year || "", price: item.price || "",
-  status: item.status === "sold" ? "sold" : item.status === "private" ? "private" : "available",
-}));
+const artworks: Artwork[] = [
+  { id: 1,  src: "/images/art-1.jpg",  title: "Painting 1",  medium: "Oil on canvas", size: '20" × 20"', year: "2025", price: "PKR 40,000", status: "available" },
+  { id: 2,  src: "/images/art-2.jpg",  title: "Painting 2",  medium: "Oil on canvas", size: '20" × 20"', year: "2025", price: "PKR 40,000", status: "available" },
+  { id: 3,  src: "/images/art-3.jpg",  title: "Painting 3",  medium: "Oil on canvas", size: '20" × 20"', year: "2025", price: "PKR 40,000", status: "available" },
+  { id: 4,  src: "/images/art-4.jpg",  title: "Painting 4",  medium: "Oil on canvas", size: '20" × 20"', year: "2025", price: "PKR 40,000", status: "available" },
+  { id: 5,  src: "/images/art-5.jpg",  title: "Painting 5",  medium: "Oil on canvas", size: '20" × 20"', year: "2025", price: "PKR 40,000", status: "available" },
+  { id: 6,  src: "/images/art-6.jpg",  title: "Painting 6",  medium: "Oil on canvas", size: '20" × 20"', year: "2025", price: "PKR 40,000", status: "available" },
+  { id: 7,  src: "/images/art-7.jpg",  title: "Painting 7",  medium: "Oil on canvas", size: '20" × 20"', year: "2025", price: "PKR 40,000", status: "available" },
+  { id: 8,  src: "/images/art-8.jpg",  title: "Painting 8",  medium: "Oil on canvas", size: '20" × 20"', year: "2025", price: "PKR 40,000", status: "available" },
+  { id: 9,  src: "/images/art-9.jpg",  title: "Painting 9",  medium: "Oil on canvas", size: '20" × 20"', year: "2025", price: "PKR 40,000", status: "available" },
+  { id: 10, src: "/images/art-10.jpg", title: "Painting 10", medium: "Oil on canvas", size: '20" × 20"', year: "2025", price: "PKR 40,000", status: "available" },
+  { id: 11, src: "/images/art-11.jpg", title: "Painting 11", medium: "Oil on canvas", size: '20" × 20"', year: "2025", price: "PKR 40,000", status: "available" },
+  { id: 12, src: "/images/art-12.jpg", title: "Painting 12", medium: "Oil on canvas", size: '20" × 20"', year: "2025", price: "PKR 40,000", status: "available" },
+  { id: 13, src: "/images/art-13.jpg", title: "Painting 13", medium: "Oil on canvas", size: '20" × 20"', year: "2025", price: "PKR 40,000", status: "available" },
+  { id: 14, src: "/images/art-14.jpg", title: "Painting 14", medium: "Oil on canvas", size: '20" × 20"', year: "2025", price: "PKR 40,000", status: "available" },
+  { id: 15, src: "/images/art-15.jpg", title: "Painting 15", medium: "Oil on canvas", size: '20" × 20"', year: "2025", price: "PKR 40,000", status: "available" },
+  { id: 16, src: "/images/art-16.jpg", title: "Painting 16", medium: "Oil on canvas", size: '20" × 20"', year: "2025", price: "PKR 40,000", status: "available" },
+  { id: 17, src: "/images/art-17.jpg", title: "Painting 17", medium: "Oil on canvas", size: '20" × 20"', year: "2025", price: "PKR 40,000", status: "available" },
+  { id: 18, src: "/images/art-18.jpg", title: "Painting 18", medium: "Oil on canvas", size: '20" × 20"', year: "2025", price: "PKR 40,000", status: "available" },
+];
 
 const filters = ["All", "Available", "Sold"] as const;
 type Filter = (typeof filters)[number];

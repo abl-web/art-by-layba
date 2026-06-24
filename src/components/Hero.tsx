@@ -1,4 +1,3 @@
-import site from "../content/site.json";
 import heroArt from "../../public/images/hero-art.jpg";
 
 export default function Hero() {
@@ -31,7 +30,9 @@ export default function Hero() {
             className="max-w-xl mt-8 text-lg md:text-xl text-ivory/80 font-light leading-relaxed animate-fade-up"
             style={{ animationDelay: "0.3s" }}
           >
-            {site.heroText}
+            Original fine art paintings & bespoke commissions by{" "}
+            <span className="font-serif italic text-gold-light">Layba Amjad</span> —
+            each canvas a quiet conversation between memory, mood and colour.
           </p>
 
           <div
